@@ -24,3 +24,6 @@ def first_page(request):
 def second_page(request):
     return render(request, 'secondpage.html')
 
+def makeover(request):
+    return render(request, 'makeover.html')
+
