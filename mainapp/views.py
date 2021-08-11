@@ -27,3 +27,5 @@ def second_page(request):
 def makeover(request):
     return render(request, 'makeover.html')
 
+def home(request):
+    return render(request, 'home.html')
