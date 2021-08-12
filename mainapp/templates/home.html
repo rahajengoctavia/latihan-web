@@ -3,9 +3,107 @@
 
 {% block content %}
 
-<div class="container">
-    <video class="img-fluid align-items-center" src="{%static 'videos/video.mp4'%}"  data-autoplay="true" autoplay="" muted="" playsinline="" loop="" webboost_processed="true" __idm_id__="747025409">
+<!-- <div class="container">
+    <video class="img-fluid" src="{%static 'videos/video.mp4'%}"  data-autoplay="true" autoplay="" muted="" playsinline="" loop="" webboost_processed="true" __idm_id__="747025409">
     </video>
+</div> -->
+
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <img src="{%static 'images/header 1.jpg'%}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="{%static 'images/header 2.jpg'%}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="{%static 'images/header 3.jpg'%}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="{%static 'images/header 4.jpg'%}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="{%static 'images/header 5.jpg'%}" class="d-block w-100" alt="...">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <div class="container-lg">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="text-center mt-4 mb-4">
+                <h2 class="fw-bold"> More About Us </h2>
+            </div>
+        </div>
+    </div>
+    <div class="row text-center mb-4">
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="skills-item card shadow-sm p-4 rounded bg-white image-copa">
+                <img style="height: 300px;" src=" /static/images/complexion finder.jpg ">
+                <div class="icon fs-2 my-3">
+                    <h10 class="fw-bold">Complexion Finder</h10>
+                </div>
+                <p class="text-muted">Take the quiz and find your perfect complexion shade, from primer to base!</p>
+                <a class="btn btn-outline-danger" href="">Try Now </a>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="skills-item card shadow-sm p-4 rounded bg-white image-x">
+                <img style="height: 300px;" src=" /static/images/CAMOUFLAGE CREAM FACE CONCEALER.jpg">
+                <div class="icon fs-2 my-3">
+                    <h10 class="fw-bold">All Products</h10>
+                </div>
+                <p class="text-muted">This 5 color palette concealer is one of the most important professional makeup tool..</p>
+                <a class="btn btn-outline-danger" href="../allproducts">See More </a>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="skills-item card shadow-sm p-4 rounded bg-white image-predator">
+                <img style="height: 300px;" src=" /static/images/beauty.jpg">
+                <div class="icon fs-2 my-3">
+                    <h10 class="fw-bold">Beauty Highlight</h10>
+                </div>
+                <p class="text-muted">#MakeOverNewBae has just dropped! It’s the Powerstay Transferproof Matte Lip Cream Nude..</p>
+                <a class="btn btn-outline-danger" href="">Read More </a>
+            </div>
+        </div>
+    </div>
 </div>
 
+<!-- <div style="margin-top: 100px;" class="card mx-4">
+    <div class="container">
+        <div class="col text-center" style= "margin-top: 30px;">
+            <img src="{%static 'images/complexion finder.jpg' %}" width="300px">
+            <h1 class="fw-bold fs-2 text text-uppercase">Complexion Finder</h1>
+            <p>Take the quiz and find your perfect complexion shade, from primer to base!</p>
+        </div>
+        <div class="col order-5 text-center">
+            <img src="{%static 'images/Brushes.png' %}" width="300px">
+            <h1 class="fw-bold fs-2 text text-uppercase">Fan Brush</h1>
+        </div>
+        <div class="col order-1">
+            Third in DOM, with an order of 1
+        </div>
+    </div>
+</div> -->
+
+
+<div style="margin-top: 100px;">
+    <iframe width="1536" height="614" src="https://www.youtube.com/embed/hoGe2VJLrRk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div> 
 {% endblock content %}
