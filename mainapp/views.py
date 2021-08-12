@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import *
 from django.http import HttpResponse
 
 # Create your views here.
@@ -29,3 +30,12 @@ def makeover(request):
 
 def home(request):
     return render(request, 'home.html')
+
+def shop_makeover_list(request):
+    try:    
+        print(request.GET)
+        category_eyes = Category.objects.get(pk=1)
+        product_makeup = Product.objects.filter(category=category_eyes)
+        return render(request, 'shop_makeover_list.html', {'product_list': product_makeup})
+    except:
+        return HttpResponse("Terjadi Error")

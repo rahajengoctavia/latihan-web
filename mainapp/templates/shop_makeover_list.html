@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div style="margin-top: 80px;" class="card mx-4">
+    <div class=" header-content container-lg mt-4">
+        <div class="row justify-content-start align-items-center mb-5">
+            <div class="col-md-3">
+                <img src="{%static 'images/CHEEK MARBLES.jpg' %}" width="300px">
+            </div>
+            <div class="col-md-5">
+                <div class="profile-text">
+                    <p>FACE </p>
+                    <h1 class="fw-bold fs-2 text-danger text-uppercase"> Marvelous Cheek Marbles </h1>
+                    <p>Who could resist this colorful and shimmery silky fine little marbles? Mix pink, magenta, bright crimson, pale purple and pearl white to deliver natural and healthy looking glow. This rare and unique Cheek Marbles is definitely worth to be one of your favorite makeup collection.</p>
+                </div>
+            </div> 
+            <div class="col text-center">
+                <h1 class="fw-bold fs-3 text-warning text-uppercase">Best Seller</h1>
+                <h2 class="fw-bold fst-italic fs-5">IDR 185.000 </h2>
+                <button class="btn btn-danger">Shop Now</button>
+            </div>
+            <div class="row text-center">
+                <h1 class="fw-bold fs-3 text-danger text-capitalize each word">Only available in August!</h1>
+            </div>
+        </div>
+        <div class="row justify-content-start align-items-center mb-5">
+            <table class="table table-striped align-items-center">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in product_list %}
+                    <tr>
+                        <th scope="col">{{forloop.counter}}</th>
+                        <th scope="col">{{item.name}}</th>
+                        <th scope="col">{{item.description}}</th>
+                        <th scope="col">{{item.price}}</th>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <form action="/shop/laptop/list/" method="GET">
+                    <input type="text" name="product_name" placeholder="input your product name"
+                        class="form-control form-control-lg fs-6">
+                    <input class="btn btn-success mt-4" type="submit" value="search">
+                </form>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<div style="margin-top: 40px;" class="card mx-4">
+    <div class=" header-content container-lg mt-4 ">
+        <div class="row justify-content-start align-items-center mb-5">
+            <div class="col-md-3">
+                <img src="{%static 'images/INTENSE MATTE LIP CREAM.jpg' %}" width="300px">
+            </div>
+            <div class="col-md-5">
+                <div class="profile-text">
+                    <p>LIPS </p>
+                    <h1 class="fw-bold fs-2 text-danger text-uppercase">Intense Matte Lip Cream</h1>
+                    <p>Lip lacquer that comes in revolutionary creamy easy-to-glide formula, fully loaded with super intense pigment for full coverage application. The rich matte finish gives weightless texture that stays up to 8 hours continuous wear.</p>
+                </div>
+            </div> 
+            <div class="col text-center">
+                <h1 class="fw-bold fs-3 text-danger text-uppercase">Last Stock</h1>
+                <h2 class="fw-normal fst-italic fs-5 text-decoration-line-through">IDR 135.000</h2>
+                <p class="fw-bold fst-italic fs-4">IDR 100.000</p>
+                <button class="btn btn-danger">Shop Now</button>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div style="margin-top: 20px;" class="card mx-4">
+    <div class=" header-content container-lg mt-4 ">
+        <div class="row justify-content-start align-items-center mb-5">
+            <div class="col-md-3">
+                <img src="{%static 'images/Brushes.png' %}" width="300px">
+            </div>
+            <div class="col-md-5">
+                <div class="profile-text">
+                    <p>TOOLS </p>
+                    <h1 class="fw-bold fs-2 text-danger text-uppercase">Fan Brush</h1>
+                    <p>A fan shaped brush ideal for the application of lightweight powders. Use it to build highlight on the highest point of the face. Also great to diffuse harsh lines or dust off excess powder.</p>
+                </div>
+            </div> 
+            <div class="col text-center">
+                <h1 class="fw-bold fs-3 text-warning text-uppercase">Best Seller</h1>
+                <h2 class="fw-bold fst-italic fs-5">IDR 79.000 </h2>
+                <button class="btn btn-danger">Shop Now</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="margin-top: 20px;" class="card mx-4">
+    <div class=" header-content container-lg mt-4 ">
+        <div class="row justify-content-start align-items-center mb-5">
+            <div class="col-md-3">
+                <img src="{%static 'images/Bloom Infinite Eye Shadow Meadow.png' %}" width="300px">
+            </div>
+            <div class="col-md-5">
+                <div class="profile-text">
+                    <p>EYES </p>
+                    <h1 class="fw-bold fs-2 text-danger text-uppercase">Bloom Infinite Eye Shadow Meadow</h1>
+                    <p>MAKE OVER X Tities Sapoetra Bloom Infinite Eye Shadow is a limited edition eyeshadow, collaboration with MAKE OVER designer spokeperson : Tities Sapoetra. Designed with smooth creamy formula that is easy to blend, featuring highly pigmented matte and striking shimmer, also packed with three coordinated colors that suitable to create everybody’s everyday fashionable light and natural makeup</p>
+                </div>
+            </div> 
+            <div class="col text-center">
+                <h1 class="fw-bold fs-3 text-danger text-uppercase">Limited Edition</h1>
+                <h2 class="fw-bold fst-italic fs-5">IDR 97.000 </h2>
+                <button class="btn btn-danger">Shop Now</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
