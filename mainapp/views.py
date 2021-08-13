@@ -31,11 +31,20 @@ def makeover(request):
 def home(request):
     return render(request, 'home.html')
 
+def search(request):
+    return render(request, 'search.html')
+
 def shop_makeover_list(request):
     try:    
         print(request.GET)
         category_eyes = Category.objects.get(pk=1)
-        product_makeup = Product.objects.filter(category=category_eyes)
-        return render(request, 'shop_makeover_list.html', {'product_list': product_makeup})
+        if(request.GET=={}): 
+            product_eyes = Product.objects.filter(category=category_eyes)
+        else:
+            product_eyes = Product.objects.filter(category=category_eyes).filter(name__contains=request.GET['product_name'])
+        if(product_eyes.count() != 0):
+            return render(request, 'shop_makeover_list.html', {'product_list': product_eyes, 'available': True})
+        else:
+            return render(request, 'shop_makeover_list.html', {'available': False})
     except:
         return HttpResponse("Terjadi Error")
